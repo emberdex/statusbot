@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, make_response, request
 from pymongo import MongoClient
-import pystatus_settings as settings
+import statusbot_settings as settings
 import datetime
 import uuid
 
