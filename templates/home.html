@@ -1,0 +1,43 @@
+<html>
+	<head>
+	    {% include "includes.html" %}
+
+		<title>StatusBot &bull; home</title>
+
+		<style>
+		.col {
+			padding-top: 12px !important;
+			padding-bottom: 12px !important;
+		}
+		</style>
+	</head>
+
+	<body>
+		{% include "navbar.html" %}
+
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<br><br>
+				<h1 class="header center">{{ app_name }}</h1>
+				<div class="row center">
+					<h5 class="header col s12 light">{{ app_slogan }}</h5>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col s4 indigo lighten-2 center-align white-text section">
+						<i class="large material-icons">settings</i><br>{{ issue_list.find({"issue_type": "maintenance"}).count() }} maintenance issues
+					</div>
+					<div class="col s4 orange lighten-2 center-align white-text section">
+						<i class="large material-icons">warning</i><br>{{ issue_list.find({"issue_type": "warning"}).count() }} warnings
+					</div>
+					<div class="col s4 red lighten-2 center-align white-text" section>
+						<i class="large material-icons">error_outline</i><br>{{ issue_list.find({"issue_type": "downtime"}).count() }} failures
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% include "footer.html" %}
+		{% include "js_includes.html" %}
+	</body>
+</html>
