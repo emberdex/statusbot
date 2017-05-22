@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 import datetime
-import pystatus_settings as settings
+import statusbot_settings as settings
 
 dbconn = MongoClient(settings.database_host, settings.database_port)
 
