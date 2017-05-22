@@ -1,5 +1,6 @@
 # statusbot
 a Flask webapp for posting messages about your network. uses the Materialize CSS web framework.
+statusbot has been validated to work on Debian 8.8 and Windows, and theoretically should work fine on anything else.
 
 ## adding stuff to statusbot
 For the time being, there's a Python script (db_add.py) that will automate the process of adding items to the database for you. Later on, this will be done through the web interface.
@@ -12,6 +13,7 @@ Installation is simple:
 ```bash
 pip install pymongo flask
 ```
+- Change whatever values you see fit in the pystatus_settings.py file - this is all nicely commented out so you know what changes what.
 - Start the server by using the init.sh provided, or running the app in python normally. Note that using the init.sh will start a screen session, which will fail if screen is not installed.
 
 ## playing with statusbot
