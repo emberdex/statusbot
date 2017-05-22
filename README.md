@@ -31,4 +31,5 @@ There's a lot in the pipeline for statusbot, in chronological order:
 Thanks for checking out statusbot, and feel free to submit a pull request if you wish! Hacking on the code is absolutely encouraged, and you're welcome to use the code for whatever you want. <3
 
 ### special thanks
-ntt4, for his valuable insight into various stylistic choices made on the site
+- Tavis Booth (ntt4), for his valuable insight into various stylistic choices made on the site
+- MaterializeCSS devs, for an awesome, flexible CSS framework.
