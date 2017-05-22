@@ -14,7 +14,7 @@ pip install pymongo flask
 - Start the server by using the init.sh provided, or running the app in python normally. Note that using the init.sh will start a screen session, which will fail if screen is not installed.
 
 ## adding stuff to statusbot
-For the time being, there's a Python script (db_add.py) that will automate the process of adding items to the database for you. Later on, this will be done through the web interface.
+For the time being, there's a Python script (add_db.py) that will automate the process of adding items to the database for you. Later on, this will be done through the web interface.
 
 ## playing with statusbot
 The entire web interface is templated using jinja2, so that you can easily change stuff like the navbar and have it work across all pages. The backend code, while a bit messy, is also quite simple to modify.
