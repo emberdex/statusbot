@@ -10,6 +10,7 @@
 
 		.card-content > i {
 			vertical-align: middle !important;
+			margin-right: 16px !important;
 		}
 		</style>
 
@@ -28,7 +29,7 @@
 					{% for issue in issue_list.find({"issue_type": "downtime"}) %}
 						<div class="card z-depth-3">
 							<div class="card-content red lighten-2 white-text less-padding valign-wrapper">
-								<i class="material-icons">error_outline</i><p>&nbsp;&nbsp;<strong>Unplanned Downtime</strong> - <em>issued on {{ issue["issue_timestamp"] }}</em></p>
+								<i class="material-icons">error_outline</i><p><strong>Unplanned Downtime</strong> - <em>issued on {{ issue["issue_timestamp"] }}</em></p>
 							</div>
 							<div class="card-content grey lighten-4">
 								<h5 style="margin: 0; margin-bottom: 15px;"><strong>{{ issue["issue_title"] }}</strong></h5>
@@ -41,7 +42,7 @@
 					{% for issue in issue_list.find({"issue_type": "warning"}) %}
 						<div class="card z-depth-3">
 							<div class="card-content orange lighten-2 white-text less-padding valign-wrapper">
-								<i class="material-icons">warning</i><p>&nbsp;&nbsp;<strong>Service Warning</strong> - <i>issued on {{ issue["issue_timestamp"] }}</i></p>
+								<i class="material-icons">warning</i><p><strong>Service Warning</strong> - <i>issued on {{ issue["issue_timestamp"] }}</i></p>
 							</div>
 							<div class="card-content grey lighten-4">
 								<h5 style="margin: 0; margin-bottom: 15px;"><strong>{{ issue["issue_title"] }}</strong></h5>
@@ -54,7 +55,7 @@
 					{% for issue in issue_list.find({"issue_type": "maintenance"}) %}
 						<div class="card z-depth-3">
 							<div class="card-content indigo lighten-2 white-text less-padding valign-wrapper">
-								<i class="material-icons">settings</i><p>&nbsp;&nbsp;<strong>Maintenance Advisory</strong> - <i>issued on {{ issue["issue_timestamp"] }}</i></p>
+								<i class="material-icons">settings</i><p><strong>Maintenance Advisory</strong> - <i>issued on {{ issue["issue_timestamp"] }}</i></p>
 							</div>
 							<div class="card-content grey lighten-4">
 								<h5 style="margin: 0; margin-bottom: 15px;"><strong>{{ issue["issue_title"] }}</strong></h5>
