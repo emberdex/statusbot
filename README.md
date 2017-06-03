@@ -13,6 +13,10 @@ pip install pymongo flask
 - Change whatever values you see fit in the statusbot_settings.py file - this is all nicely commented out so you know what changes what.
 - Start the server by using the init.sh provided, or running the app in python normally. Note that using the init.sh will start a screen session, which will fail if screen is not installed.
 
+note, if you're planning on using statusbot in a production environment:
+- you're awesome
+- but **_please_** set it up on uwsgi! there are many good tutorials on how to do this. the inbuilt werkzeug http server just isn't stable enough for use in production and *will crash*.
+
 ## adding stuff to statusbot
 For the time being, there's a Python script (add_db.py) that will automate the process of adding items to the database for you. Later on, this will be done through the web interface.
 
