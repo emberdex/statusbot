@@ -11,7 +11,7 @@ database_collection = "issues"
 app_host = "0.0.0.0"
 # The port on which the app should bind.
 # You may want to change this for development purposes.
-app_port = 80
+app_port = 8001
 # The name of the app.
 # Shows up in the navbar, as well as on the home page.
 app_name = "StatusBot"

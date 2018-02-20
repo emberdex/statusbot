@@ -5,7 +5,7 @@ import datetime
 import uuid
 
 webapp = Flask(__name__)
-dbconn = MongoClient(settings.database_host, settings.database_port)
+dbconn = MongoClient(settings.database_host, settings.database_port, connect=False)
 
 database = dbconn[settings.database_name]
 dbcollection = database[settings.database_collection]
@@ -18,4 +18,5 @@ def display_homepage(issue_list=None, app_name=None, app_slogan=None):
 def display_issues(issue_list=None, app_name=None):
 	return render_template("issues.html", issue_list=dbcollection, app_name=settings.app_name)
 
-webapp.run(host=settings.app_host, port=settings.app_port)
+if __name__ == "__main__":
+	webapp.run(host=settings.app_host, port=settings.app_port)

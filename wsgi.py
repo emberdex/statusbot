@@ -1,4 +1,4 @@
-from statusbot_wsgi import webapp
+from app import webapp
 import statusbot_settings as settings
 
 if __name__ == "__main__":
