@@ -35,6 +35,12 @@
 								<h5 style="margin: 0; margin-bottom: 15px;"><strong>{{ issue["issue_title"] }}</strong></h5>
 								<p>{{ issue["issue_body"] }}</p><br />
 								<p><strong>Expected time of resolution:</strong> {{ issue["issue_solve_timestamp"] }}</p>
+								<p><strong>Affected servers:</strong></p>
+								<ul class="browser-default">
+								{% for server in issue["issue_affected_servers"].split(",") %}
+									<li>{{ server }}</li>
+								{% endfor %}
+								</ul>
 							</div>
 						</div>
 					{% endfor %}
@@ -48,6 +54,12 @@
 								<h5 style="margin: 0; margin-bottom: 15px;"><strong>{{ issue["issue_title"] }}</strong></h5>
 								<p>{{ issue["issue_body"] }}</p><br />
 								<p><strong>Expected time of resolution:</strong> {{ issue["issue_solve_timestamp"] }}</p>
+								<p><strong>Affected servers:</strong></p>
+								<ul class="browser-default">
+								{% for server in issue["issue_affected_servers"].split(",") %}
+									<li>{{ server }}</li>
+								{% endfor %}
+								</ul>
 							</div>
 						</div>
 					{% endfor %}
@@ -61,6 +73,12 @@
 								<h5 style="margin: 0; margin-bottom: 15px;"><strong>{{ issue["issue_title"] }}</strong></h5>
 								<p>{{ issue["issue_body"] }}</p><br />
 								<p><strong>Expected time of resolution:</strong> {{ issue["issue_solve_timestamp"] }}</p>
+								<p><strong>Affected servers:</strong></p>
+								<ul class="browser-default">
+								{% for server in issue["issue_affected_servers"].split(",") %}
+									<li>{{ server }}</li>
+								{% endfor %}
+								</ul>
 							</div>
 						</div>
 					{% endfor %}
